@@ -7,7 +7,6 @@ export const EnergyVortex: React.FC = () => {
       height="400"
       viewBox="0 0 200 400"
       className="energy-vortex-svg"
-      style={{ filter: 'drop-shadow(0 0 30px rgba(168, 85, 247, 0.6))' }}
     >
       <defs>
         <linearGradient id="vortexGradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -23,54 +22,6 @@ export const EnergyVortex: React.FC = () => {
             <feMergeNode in="SourceGraphic" />
           </feMerge>
         </filter>
-
-        <style>{`
-          @keyframes vortexFlow {
-            0% {
-              stroke-dashoffset: 0;
-              opacity: 0.8;
-            }
-            50% {
-              opacity: 0.6;
-            }
-            100% {
-              stroke-dashoffset: 200;
-              opacity: 0.3;
-            }
-          }
-
-          @keyframes vortexPulse {
-            0%, 100% {
-              filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.4));
-            }
-            50% {
-              filter: drop-shadow(0 0 40px rgba(168, 85, 247, 0.8));
-            }
-          }
-
-          .vortex-path {
-            fill: none;
-            stroke: url(#vortexGradient);
-            stroke-width: 3;
-            stroke-linecap: round;
-            filter: url(#glow);
-            animation: vortexFlow 4s ease-in-out infinite;
-          }
-
-          .vortex-path:nth-child(2) {
-            animation-delay: 0.5s;
-            stroke-width: 2.5;
-          }
-
-          .vortex-path:nth-child(3) {
-            animation-delay: 1s;
-            stroke-width: 2;
-          }
-
-          .vortex-container {
-            animation: vortexPulse 3s ease-in-out infinite;
-          }
-        `}</style>
       </defs>
 
       <g className="vortex-container">
@@ -100,10 +51,8 @@ export const EnergyVortex: React.FC = () => {
           stroke="url(#vortexGradient)"
           strokeWidth="1.5"
           opacity="0.4"
-          style={{
-            animation: 'vortexFlow 5s ease-in-out infinite',
-            strokeDasharray: '157',
-          }}
+          className="vortex-orbit vortex-orbit-near"
+          strokeDasharray="157"
         />
         <circle
           cx="100"
@@ -113,10 +62,8 @@ export const EnergyVortex: React.FC = () => {
           stroke="url(#vortexGradient)"
           strokeWidth="1.5"
           opacity="0.3"
-          style={{
-            animation: 'vortexFlow 6s ease-in-out infinite',
-            strokeDasharray: '220',
-          }}
+          className="vortex-orbit vortex-orbit-far"
+          strokeDasharray="220"
         />
       </g>
     </svg>

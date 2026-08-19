@@ -55,7 +55,15 @@ img { display: block; max-width: 100%; }
 .cloud-four { width: 60vw; min-width: 620px; left: 17%; bottom: -29%; opacity: .35; }
 .portal-scene { position: absolute; z-index: 1; right: max(4vw, calc((100vw - 1260px) / 2)); bottom: 3vh; width: min(43vw, 540px); height: min(76vh, 680px); display: grid; place-items: end center; opacity: .82; }
 .portal { width: 100%; max-height: 68vh; object-fit: contain; mix-blend-mode: screen; filter: saturate(.8) hue-rotate(8deg); }
-.energy-vortex-svg { position: absolute; width: 42%; height: 68%; top: 4%; left: 29%; z-index: -1; opacity: .72; }
+.energy-vortex-svg { position: absolute; width: 42%; height: 68%; top: 4%; left: 29%; z-index: -1; opacity: .72; filter: drop-shadow(0 0 30px rgba(168, 85, 247, .6)); }
+.vortex-path { fill: none; stroke: url(#vortexGradient); stroke-width: 3; stroke-linecap: round; filter: url(#glow); animation: vortex-flow 4s ease-in-out infinite; }
+.vortex-path:nth-child(2) { animation-delay: .5s; stroke-width: 2.5; }
+.vortex-path:nth-child(3) { animation-delay: 1s; stroke-width: 2; }
+.vortex-container { animation: vortex-pulse 3s ease-in-out infinite; }
+.vortex-orbit { animation: vortex-flow 5s ease-in-out infinite; }
+.vortex-orbit-far { animation-duration: 6s; }
+@keyframes vortex-flow { 0% { stroke-dashoffset: 0; opacity: .8; } 50% { opacity: .6; } 100% { stroke-dashoffset: 200; opacity: .3; } }
+@keyframes vortex-pulse { 0%, 100% { filter: drop-shadow(0 0 20px rgba(168, 85, 247, .4)); } 50% { filter: drop-shadow(0 0 40px rgba(168, 85, 247, .8)); } }
 .hero-copy { position: relative; z-index: 3; width: min(1180px, calc(100% - 3rem)); margin: 0 auto; padding-right: min(42vw, 500px); }
 .eyebrow { display: flex; align-items: center; gap: .45rem; margin: 0 0 1rem; color: #7261ad; font-size: .77rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .hero .eyebrow { color: #c9baff; }

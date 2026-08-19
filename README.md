@@ -1,8 +1,8 @@
 # James — public-interest systems portfolio
 
-I build useful ways through complicated problems.
+I build practical solutions to complicated problems.
 
-This portfolio brings together civic technology, research workflows, decision-support experiments, and practical tools designed to make difficult information easier to understand, verify, and use.
+From civic technology and job-search tools to experimental research workflows, open-source intelligence, and advocacy sites, the goal is simple: turn complicated problems and scattered information into actionable results.
 
 ![The portfolio entrance, with a cloud-framed portal and an introduction to the work](docs/screenshots/portfolio-entrance.png)
 
@@ -60,6 +60,10 @@ npm run screenshots
 - `client/src/styles.css` — responsive visual system.
 - `client/public/projects/` — project screenshots and the Z-SPAN banner.
 - `docs/ARCHITECTURE.md` — implementation and maintenance notes.
+
+## Production deployment
+
+The `main` branch deploys automatically through the Cloudflare Pages project `scootsolute-portfolio`. The production site is [scootsolute.org](https://scootsolute.org), with managed HTTPS and repository-defined security headers. GitHub Actions runs the tests and production build independently on every push.
 
 ## Contributions and maintenance
 

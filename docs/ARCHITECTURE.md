@@ -11,9 +11,24 @@ The portfolio is a static, image-led introduction to a body of public-interest s
 - One data file, `client/src/data/projects.ts`, keeps released-project order, copy, links, images, and boundaries together.
 - `client/src/App.tsx` contains the page's intentionally small set of sections and the featured Z-SPAN presentation.
 - Framer Motion supplies restrained entrance and in-view transitions; reduced-motion preferences disable them.
-- GitHub Actions runs the tests and build before deploying the static output to GitHub Pages.
+- GitHub Actions independently runs the tests and production build on every push.
+- Cloudflare Pages connects directly to the GitHub repository and builds each `main` commit into the production site.
 
 There is no backend. External navigation is limited to the project repositories, the Z-SPAN site, and the owner's GitHub profile.
+
+## Production hosting
+
+- Cloudflare Pages project: `scootsolute-portfolio`
+- Git source: `anitacigawet/Portfolio-Website`
+- Production branch: `main`
+- Build command: `npm test && npm run build`
+- Build output: `dist`
+- Canonical domain: `https://scootsolute.org`
+- Additional domain: `https://www.scootsolute.org`
+
+Only the root and `www` DNS records point to this Pages project. ScootSolute's project subdomains continue to use their existing Cloudflare Tunnel routes.
+
+Cloudflare provides managed HTTPS for both domains. `client/public/_headers` adds a restrictive content security policy, clickjacking protection, MIME sniffing protection, referrer and browser-permission controls, cross-origin isolation headers, and HSTS. The site contains no runtime secrets or environment variables.
 
 ## Public-data boundaries
 
