@@ -70,9 +70,9 @@ export default function App() {
             transition={{ duration: 0.7 }}
           >
             <p className="eyebrow"><Sparkles aria-hidden="true" /> Public-interest systems</p>
-            <h1 id="hero-title">I build useful ways through complicated problems.</h1>
+            <h1 id="hero-title">I build practical solutions to complicated problems.</h1>
             <p className="hero-lede">
-              Civic technology, research workflows, and practical tools that turn scattered information into work people can understand, verify, and use.
+              From civic technology and job-search tools to experimental research workflows, open-source intelligence, and advocacy sites, the goal is simple: turn complicated problems and scattered information into actionable results.
             </p>
             <button type="button" className="primary-button" onClick={scrollToWork}>
               Enter the work <ArrowDown aria-hidden="true" />
@@ -87,9 +87,9 @@ export default function App() {
         <section className="work-section section-wrap" id="work" aria-labelledby="work-title">
           <div className="section-intro">
             <p className="eyebrow">Current focus</p>
-            <h2 id="work-title">Making local government easier to follow.</h2>
+            <h2 id="work-title">Z‑SPAN: A virtual library for local politics</h2>
             <p>
-              Z‑SPAN is a virtual library that turns local government meetings into source-linked, searchable episode pages: key decisions, what comes next, and word-synced transcripts anchored to each city’s own recording.
+              The goal was simple: Make local government easier to understand.
             </p>
           </div>
 
@@ -104,25 +104,35 @@ export default function App() {
               <img src={asset('projects/zspan.png')} alt="Z-SPAN for All illustrated banner" />
             </div>
             <div className="featured-copy">
-              <p className="status"><span aria-hidden="true" /> In active development</p>
-              <h3>Z‑SPAN</h3>
-              <p>
-                A public-interest project built around a simple promise: people should be able to understand what happened in a local meeting and trace every summary back to the public record.
-              </p>
-              <div className="project-actions">
-                <a className="primary-link" href="https://zspan.org" target="_blank" rel="noreferrer">
-                  <Globe2 aria-hidden="true" /> Visit zspan.org
-                </a>
-                <a className="secondary-link" href="https://github.com/anitacigawet/Z-SPAN-dev" target="_blank" rel="noreferrer">
-                  <Github aria-hidden="true" /> View repository
-                </a>
+              <div className="featured-heading">
+                <p className="status"><span aria-hidden="true" /> In active development</p>
+                <h3>Z‑SPAN</h3>
+              </div>
+              <div className="featured-details">
+                <p>
+                  Z‑SPAN converts local government meetings into bite-sized episodes that extract key decisions, quotes, and community calls to action. Every claim is backed by a word-synced video citation to the original recording, making the context transparent and directly verifiable.
+                </p>
+                <p>
+                  Ask its Librarian a question and it returns exact, word-synced video citations for its response. If the record does not support an answer, it says so instead of guessing.
+                </p>
+                <p>
+                  Check it out!
+                </p>
+                <div className="project-actions">
+                  <a className="primary-link" href="https://zspan.org" target="_blank" rel="noreferrer">
+                    <Globe2 aria-hidden="true" /> Visit zspan.org
+                  </a>
+                  <a className="secondary-link" href="https://github.com/anitacigawet/Z-SPAN-dev" target="_blank" rel="noreferrer">
+                    <Github aria-hidden="true" /> View repository
+                  </a>
+                </div>
               </div>
             </div>
           </motion.article>
 
           <div className="released-heading">
             <p className="eyebrow">Released projects</p>
-            <h2>Tools for research, decisions, and public understanding.</h2>
+            <h2>Tools for humanity</h2>
           </div>
           <div className="project-grid">
             {projects.map((project, index) => <ProjectCard key={project.title} project={project} index={index} />)}

@@ -11,7 +11,7 @@ export const projects: Project[] = [
   {
     title: 'Job Matrix',
     description:
-      'A local-first workspace for comparing job postings, tracking applications, and keeping a job search organized without surrendering the process to another platform.',
+      'Assists with finding, comparing, and tracking job listings from platforms including Indeed, LinkedIn, and Glassdoor. Keeps your job search organized, intentional, and free from clutter.',
     image: 'job-matrix.png',
     tags: ['Personal operations', 'Local-first', 'Job research'],
     source: 'https://github.com/anitacigawet/Job-Matrix',
@@ -19,7 +19,7 @@ export const projects: Project[] = [
   {
     title: 'Project Ganymede',
     description:
-      'A layered strategic-reasoning workspace that keeps assumptions, counterarguments, evidence gaps, and revisions visible as an idea develops.',
+      'A multidimensional strategic-reasoning workspace that autonomously develops assumptions, counterarguments, evidence gaps, and revisions. The process appears as a lithography machine you can watch while an idea develops, with a design inspired by the Corpus Callosum: contrasting analytical hemispheres connected through synthesis.',
     image: 'ganymede.png',
     tags: ['Decision support', 'Structured reasoning', 'Research'],
     source: 'https://github.com/anitacigawet/Project-Ganymede',
@@ -27,7 +27,7 @@ export const projects: Project[] = [
   {
     title: 'Fractal Framework',
     description:
-      'A guided framework for turning one local problem into a source-cited advocacy site with a concrete path from research to action.',
+      'Turn a single prompt into a dynamically generated advocacy site, grounded in research citations and paired with concrete plans of action.',
     image: 'fractal-framework.png',
     tags: ['Civic action', 'Evidence', 'Guided workflow'],
     source: 'https://github.com/anitacigawet/fractal-framework',
