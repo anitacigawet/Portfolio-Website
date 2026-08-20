@@ -38,7 +38,7 @@ export default function App() {
   const scrollToWork = () => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <div className="site-shell">
+    <div className="site-shell" data-build="portfolio-copy-2026-08-19">
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Portfolio home">J<span>·</span>S</a>
         <nav aria-label="Main navigation">
