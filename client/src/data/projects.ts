@@ -11,7 +11,7 @@ export const projects: Project[] = [
   {
     title: 'Job Matrix',
     description:
-      'Assists with finding, comparing, and tracking job listings from platforms including Indeed, LinkedIn, and Glassdoor. Keeps your job search organized, intentional, and free from clutter.',
+      'Assists with finding, comparing, and tracking job listings from various platforms including Indeed, LinkedIn, and Glassdoor. Ensures your job search is organized, intentional, and free from clutter.',
     image: 'job-matrix.png',
     tags: ['Personal operations', 'Local-first', 'Job research'],
     source: 'https://github.com/anitacigawet/Job-Matrix',
@@ -19,7 +19,7 @@ export const projects: Project[] = [
   {
     title: 'Project Ganymede',
     description:
-      'A multidimensional strategic-reasoning workspace that autonomously develops assumptions, counterarguments, evidence gaps, and revisions. The process appears as a lithography machine you can watch while an idea develops, with a design inspired by the Corpus Callosum: contrasting analytical hemispheres connected through synthesis.',
+      'A multi-dimensional strategic-reasoning workspace that autonomously develops assumptions, counterarguments, evidence gaps, and revisions, visually represented as a lithography machine you can watch as the idea develops. It utilizes a design inspired by the corpus callosum: contrasting analytical hemispheres connected through synthesis.',
     image: 'ganymede.png',
     tags: ['Decision support', 'Structured reasoning', 'Research'],
     source: 'https://github.com/anitacigawet/Project-Ganymede',
@@ -27,7 +27,7 @@ export const projects: Project[] = [
   {
     title: 'Fractal Framework',
     description:
-      'Turn a single prompt into a dynamically generated advocacy site, grounded in research citations and paired with concrete plans of action.',
+      'Turn a single prompt into a dynamically generated advocacy site, grounded in research citations, with concrete plans of action.',
     image: 'fractal-framework.png',
     tags: ['Civic action', 'Evidence', 'Guided workflow'],
     source: 'https://github.com/anitacigawet/fractal-framework',

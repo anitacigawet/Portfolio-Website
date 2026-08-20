@@ -72,7 +72,7 @@ export default function App() {
             <p className="eyebrow"><Sparkles aria-hidden="true" /> Public-interest systems</p>
             <h1 id="hero-title">I build practical solutions to complicated problems.</h1>
             <p className="hero-lede">
-              From civic technology and job-search tools to experimental research workflows, open-source intelligence, and advocacy sites, the goal is simple: turn complicated problems and scattered information into actionable results.
+              From civic technology, tools to assist with job &amp; career searches, experimental research workflows, open-source intelligence, or even advocacy sites, the goal is simple: turn complicated problems and scattered information into actionable results.
             </p>
             <button type="button" className="primary-button" onClick={scrollToWork}>
               Enter the work <ArrowDown aria-hidden="true" />
@@ -87,7 +87,7 @@ export default function App() {
         <section className="work-section section-wrap" id="work" aria-labelledby="work-title">
           <div className="section-intro">
             <p className="eyebrow">Current focus</p>
-            <h2 id="work-title">Z‑SPAN: A virtual library for local politics</h2>
+            <h2 id="work-title">Z-SPAN: A virtual library for local politics</h2>
             <p>
               The goal was simple: Make local government easier to understand.
             </p>
@@ -106,14 +106,14 @@ export default function App() {
             <div className="featured-copy">
               <div className="featured-heading">
                 <p className="status"><span aria-hidden="true" /> In active development</p>
-                <h3>Z‑SPAN</h3>
+                <h3>Z-SPAN</h3>
               </div>
               <div className="featured-details">
                 <p>
-                  Z‑SPAN converts local government meetings into bite-sized episodes that extract key decisions, quotes, and community calls to action. Every claim is backed by a word-synced video citation to the original recording, making the context transparent and directly verifiable.
+                  Z-SPAN converts local government meetings into bite-sized episodes that extract key decisions, quotes, and community calls to action. Every claim is 100% backed with word-synced video citations from the original recording for guaranteed authenticity and transparency.
                 </p>
                 <p>
-                  Ask its Librarian a question and it returns exact, word-synced video citations for its response. If the record does not support an answer, it says so instead of guessing.
+                  It includes a Librarian that, when queried, returns exact word-synced video citations for each response, or it will simply not respond at all.
                 </p>
                 <p>
                   Check it out!

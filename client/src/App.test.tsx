@@ -7,7 +7,7 @@ describe('portfolio', () => {
     render(<App />);
 
     expect(screen.getByRole('heading', { name: /practical solutions to complicated problems/i })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: 'Z‑SPAN' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Z-SPAN' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /visit zspan.org/i })).toHaveAttribute('href', 'https://zspan.org');
 
     for (const title of ['Job Matrix', 'Project Ganymede', 'Fractal Framework', 'The Cacti', 'PrisonBreak', 'Arizona Basin Monitor', 'Who Runs Arizona']) {
