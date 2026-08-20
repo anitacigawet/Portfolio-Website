@@ -145,7 +145,7 @@ export default function App() {
               <p className="eyebrow">How I work</p>
               <h2 id="approach-title">The tool comes after the understanding.</h2>
               <p>
-                The projects differ, but the method stays consistent: learn the shape of the problem, make the evidence visible, design a responsible process, and turn it into something another person can actually use.
+                While the projects differ, the method stays consistent: Observe the shape of the problem, analyze the full totality/depth of the intended goal, and design a solution that another person can <em>actually</em> use
               </p>
             </div>
             <ol className="process-list">
@@ -161,7 +161,7 @@ export default function App() {
           <div className="about-mark" aria-hidden="true">JS</div>
           <div className="about-copy">
             <p className="eyebrow">About</p>
-            <h2 id="about-title">Public-interest systems builder and program-operations generalist.</h2>
+            <h2 id="about-title">Systems builder/Program-operations generalist</h2>
             <p>
               I build tools and research workflows that help mission-driven organizations turn complicated information into defensible, usable work. I’m most at home where civic questions, program operations, research, and technology overlap.
             </p>
@@ -173,7 +173,7 @@ export default function App() {
       </main>
 
       <footer>
-        <p>Built for public-interest work.</p>
+        <p>Thank you for reading 💙</p>
         <p>© 2026 ScootSolute LLC · Source available under PolyForm Noncommercial 1.0.0</p>
       </footer>
     </div>
