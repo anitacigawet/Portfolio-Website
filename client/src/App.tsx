@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, ArrowUpRight, Github, Globe2, Sparkles } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Github, MousePointerClick, Sparkles } from 'lucide-react';
 import { EnergyVortex } from './components/EnergyVortex';
 import { projects } from './data/projects';
 
@@ -72,7 +72,7 @@ export default function App() {
             <p className="eyebrow"><Sparkles aria-hidden="true" /> Public-interest systems</p>
             <h1 id="hero-title">I build practical solutions to complicated problems.</h1>
             <p className="hero-lede">
-              From civic technology, tools to assist with job &amp; career searches, experimental research workflows, open-source intelligence, or even advocacy sites, the goal is simple: turn complicated problems and scattered information into actionable results.
+              From civic technology, tools to assist with job &amp; career searches, experimental research workflows, open-source intelligence, or even advocacy sites, the directive is simple: turn complicated problems and scattered data into actionable results.
             </p>
             <button type="button" className="primary-button" onClick={scrollToWork}>
               Enter the work <ArrowDown aria-hidden="true" />
@@ -113,14 +113,14 @@ export default function App() {
                   Z-SPAN converts local government meetings into bite-sized episodes that extract key decisions, quotes, and community calls to action. Every claim is 100% backed with word-synced video citations from the original recording for guaranteed authenticity and transparency.
                 </p>
                 <p>
-                  It includes a Librarian that, when queried, returns exact word-synced video citations for each response, or it will simply not respond at all.
+                  It includes a Librarian that, when queried, will return <em>exact</em> word-synced video citations for each response, or it will simply not respond at all.
                 </p>
                 <p>
                   Check it out!
                 </p>
                 <div className="project-actions">
                   <a className="primary-link" href="https://zspan.org" target="_blank" rel="noreferrer">
-                    <Globe2 aria-hidden="true" /> Visit zspan.org
+                    <MousePointerClick aria-hidden="true" /> Visit zspan.org
                   </a>
                   <a className="secondary-link" href="https://github.com/anitacigawet/Z-SPAN-dev" target="_blank" rel="noreferrer">
                     <Github aria-hidden="true" /> View repository

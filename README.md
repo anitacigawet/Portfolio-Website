@@ -2,7 +2,7 @@
 
 I build practical solutions to complicated problems.
 
-From civic technology, tools to assist with job & career searches, experimental research workflows, open-source intelligence, or even advocacy sites, the goal is simple: turn complicated problems and scattered information into actionable results.
+From civic technology, tools to assist with job & career searches, experimental research workflows, open-source intelligence, or even advocacy sites, the directive is simple: turn complicated problems and scattered data into actionable results.
 
 ![The portfolio entrance, with a cloud-framed portal and an introduction to the work](docs/screenshots/portfolio-entrance.png)
 
