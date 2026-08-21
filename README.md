@@ -13,7 +13,7 @@ The portfolio leads with [Z-SPAN](https://zspan.org), an active public-interest 
 ![Z-SPAN presented as the portfolio's current focus](docs/screenshots/zspan-focus.png)
 
 - [Job Matrix](https://github.com/anitacigawet/Job-Matrix) — a local-first job-search workspace.
-- [Project Ganymede](https://github.com/anitacigawet/Project-Ganymede) — a layered strategic-reasoning workspace.
+- [Project Ganymede](https://github.com/anitacigawet/Project-Ganymede) — a strategic-physics research sandbox with visible audit and synthesis stages.
 - [Fractal Framework](https://github.com/anitacigawet/fractal-framework) — a guided path from a local problem to source-cited advocacy.
 - [The Cacti](https://github.com/anitacigawet/The-Cacti) — a self-hosted civic research workspace.
 - [PrisonBreak](https://github.com/anitacigawet/PrisonBreak) — source-grounded case reading and attorney-question preparation.
