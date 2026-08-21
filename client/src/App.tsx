@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, ArrowUpRight, Github, MousePointerClick, Sparkles } from 'lucide-react';
+import { ArrowDown, Github, MousePointerClick, Sparkles } from 'lucide-react';
 import { EnergyVortex } from './components/EnergyVortex';
 import { projects } from './data/projects';
 
@@ -14,21 +14,26 @@ function ProjectCard({ project, index }: { project: (typeof projects)[number]; i
       viewport={{ once: true, amount: 0.18 }}
       transition={{ duration: 0.45, delay: Math.min(index * 0.04, 0.2) }}
     >
-      <a className="project-image-link" href={project.source} target="_blank" rel="noreferrer">
+      <a className="project-image-link" href={project.showcase} target="_blank" rel="noreferrer" aria-label={`View ${project.title} showcase`}>
         <img src={asset(`projects/${project.image}`)} alt={`${project.title} interface`} loading="lazy" />
       </a>
       <div className="project-card-body">
         <div className="project-heading">
-          <h3>{project.title}</h3>
-          <a className="icon-link" href={project.source} target="_blank" rel="noreferrer" aria-label={`View ${project.title} on GitHub`}>
-            <ArrowUpRight aria-hidden="true" />
-          </a>
+          <h3><a href={project.showcase} target="_blank" rel="noreferrer">{project.title}</a></h3>
         </div>
         <p>{project.description}</p>
         {project.note && <p className="project-note">{project.note}</p>}
         <ul className="tag-list" aria-label={`${project.title} themes`}>
           {project.tags.map((tag) => <li key={tag}>{tag}</li>)}
         </ul>
+        <div className="project-card-actions">
+          <a className="showcase-link" href={project.showcase} target="_blank" rel="noreferrer">
+            <MousePointerClick aria-hidden="true" /> View showcase
+          </a>
+          <a className="code-link" href={project.source} target="_blank" rel="noreferrer">
+            <Github aria-hidden="true" /> See the code here
+          </a>
+        </div>
       </div>
     </motion.article>
   );
@@ -38,13 +43,11 @@ export default function App() {
   const scrollToWork = () => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <div className="site-shell" data-build="portfolio-copy-2026-08-19">
+    <div className="site-shell" data-build="portfolio-project-links-2026-08-21">
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Portfolio home">J<span>·</span>S</a>
         <nav aria-label="Main navigation">
           <a href="#work">Work</a>
-          <a href="#approach">Approach</a>
-          <a href="#about">About</a>
           <a className="nav-github" href="https://github.com/anitacigawet" target="_blank" rel="noreferrer">
             <Github aria-hidden="true" /> GitHub
           </a>
@@ -139,37 +142,6 @@ export default function App() {
           </div>
         </section>
 
-        <section className="approach-section" id="approach" aria-labelledby="approach-title">
-          <div className="section-wrap approach-inner">
-            <div className="approach-copy">
-              <p className="eyebrow">How I work</p>
-              <h2 id="approach-title">The tool comes after the understanding.</h2>
-              <p>
-                While the projects differ, the method stays consistent: Observe the shape of the problem, analyze the full totality/depth of the intended goal, and design a solution that another person can <em>actually</em> use
-              </p>
-            </div>
-            <ol className="process-list">
-              <li><span>01</span><div><h3>Understand the problem</h3><p>Start with the people, constraints, and decisions—not a preferred technology.</p></div></li>
-              <li><span>02</span><div><h3>Map the evidence</h3><p>Separate what is known, inferred, missing, synthetic, or likely to change.</p></div></li>
-              <li><span>03</span><div><h3>Design the process</h3><p>Build verification and honest boundaries into the workflow itself.</p></div></li>
-              <li><span>04</span><div><h3>Make it usable</h3><p>Give the work a clear surface that helps someone move forward.</p></div></li>
-            </ol>
-          </div>
-        </section>
-
-        <section className="about-section section-wrap" id="about" aria-labelledby="about-title">
-          <div className="about-mark" aria-hidden="true">JS</div>
-          <div className="about-copy">
-            <p className="eyebrow">About</p>
-            <h2 id="about-title">Systems builder/Program-operations generalist</h2>
-            <p>
-              I build tools and research workflows that help mission-driven organizations turn complicated information into defensible, usable work. I’m most at home where civic questions, program operations, research, and technology overlap.
-            </p>
-            <a className="primary-link dark" href="https://github.com/anitacigawet" target="_blank" rel="noreferrer">
-              <Github aria-hidden="true" /> Explore all repositories
-            </a>
-          </div>
-        </section>
       </main>
 
       <footer>

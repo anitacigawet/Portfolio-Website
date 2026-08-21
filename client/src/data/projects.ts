@@ -3,6 +3,7 @@ export type Project = {
   description: string;
   image: string;
   tags: string[];
+  showcase: string;
   source: string;
   note?: string;
 };
@@ -14,6 +15,7 @@ export const projects: Project[] = [
       'Assists with finding, comparing, and tracking job listings from various platforms including Indeed, LinkedIn, and Glassdoor. Ensures your job search is organized, intentional, and free from clutter.',
     image: 'job-matrix.png',
     tags: ['Personal operations', 'Local-first', 'Job research'],
+    showcase: 'https://jobmatrix.scootsolute.org',
     source: 'https://github.com/anitacigawet/Job-Matrix',
   },
   {
@@ -22,6 +24,7 @@ export const projects: Project[] = [
       'A multi-dimensional strategic-reasoning workspace that autonomously develops assumptions, counterarguments, evidence gaps, and revisions, visually represented as a lithography machine you can watch as the idea develops. It utilizes a design inspired by the corpus callosum: contrasting analytical hemispheres connected through synthesis.',
     image: 'ganymede.png',
     tags: ['Decision support', 'Structured reasoning', 'Research'],
+    showcase: 'https://ganymede.scootsolute.org',
     source: 'https://github.com/anitacigawet/Project-Ganymede',
   },
   {
@@ -30,6 +33,7 @@ export const projects: Project[] = [
       'Turn a single prompt into a dynamically generated advocacy site, grounded in research citations, with concrete plans of action.',
     image: 'fractal-framework.png',
     tags: ['Civic action', 'Evidence', 'Guided workflow'],
+    showcase: 'https://fractal.scootsolute.org',
     source: 'https://github.com/anitacigawet/fractal-framework',
   },
   {
@@ -38,6 +42,7 @@ export const projects: Project[] = [
       'A self-hosted civic research workspace for making local records and news easier to collect, connect, and revisit.',
     image: 'the-cacti.png',
     tags: ['Civic research', 'Local records', 'Knowledge workspace'],
+    showcase: 'https://cacti.scootsolute.org',
     source: 'https://github.com/anitacigawet/The-Cacti',
   },
   {
@@ -46,6 +51,7 @@ export const projects: Project[] = [
       'A source-grounded workspace for reading a criminal case record and preparing sharper, better-organized questions for an attorney.',
     image: 'prisonbreak.png',
     tags: ['Document review', 'Legal preparation', 'Source grounding'],
+    showcase: 'https://prisonbreak.scootsolute.org',
     source: 'https://github.com/anitacigawet/PrisonBreak',
     note: 'Not legal advice.',
   },
@@ -55,6 +61,7 @@ export const projects: Project[] = [
       'A clearly labeled synthetic prototype exploring how Arizona water-basin monitoring could become easier to scan and understand.',
     image: 'water-dashboard.png',
     tags: ['Water policy', 'Interface prototype', 'Data boundaries'],
+    showcase: 'https://water.scootsolute.org',
     source: 'https://github.com/anitacigawet/Water_Dashboard',
     note: 'Demonstration data only—not a live monitoring service.',
   },
@@ -64,6 +71,7 @@ export const projects: Project[] = [
       'A small civic prototype for learning how Arizona’s state and local institutions fit together without presenting a stale roster as current fact.',
     image: 'who-runs-arizona.png',
     tags: ['Civic education', 'Government structure', 'Arizona'],
+    showcase: 'https://whorunsarizona.scootsolute.org',
     source: 'https://github.com/anitacigawet/Who-Runs-Arizona',
   },
 ];
