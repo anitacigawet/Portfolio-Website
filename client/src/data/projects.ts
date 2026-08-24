@@ -21,9 +21,9 @@ export const projects: Project[] = [
   {
     title: 'Project Ganymede',
     description:
-      'A multi-dimensional strategic-reasoning workspace that autonomously develops assumptions, counterarguments, evidence gaps, and revisions, visually represented as a lithography machine you can watch as the idea develops. It utilizes a design inspired by the corpus callosum: contrasting analytical hemispheres connected through synthesis.',
+      'A strategic-physics research sandbox that routes a scenario into the right workflow, develops an initial resolution, sends it through separate fault-finding and connection audits, and makes each analytical stroke visible through its optics-box interface.',
     image: 'ganymede.png',
-    tags: ['Decision support', 'Structured reasoning', 'Research'],
+    tags: ['Strategic modeling', 'Audit loop', 'Interactive system'],
     showcase: 'https://ganymede.scootsolute.org',
     source: 'https://github.com/anitacigawet/Project-Ganymede',
   },
