@@ -1,0 +1,168 @@
+/* Paper colors stay in the palette. These treatments change the printed
+   artwork and composition while keeping every layer attached to its paper. */
+.envelope-back, .envelope-front { container-type: inline-size; }
+.env-design-art {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 2;
+  fill: none; stroke: currentColor; stroke-width: 1.7;
+  stroke-linecap: round; stroke-linejoin: round;
+  color: color-mix(in srgb, var(--envelope-airmail-blue) 65%, #4e392b);
+}
+.env-design-art--flap { height: calc(100% / .56); }
+.env-print { display: none; }
+.env-print-letterpress { opacity: .78; }
+.env-print-botanical { opacity: .65; stroke-width: 1.8; }
+.env-leaf { fill: currentColor; fill-opacity: .12; }
+.env-print-deco { opacity: .82; stroke-width: 2.6; }
+.env-print-field { opacity: .62; }
+.env-print-solid { fill: currentColor; fill-opacity: .65; }
+.env-print-minimal { opacity: .75; }
+
+html[data-envelope-design='letterpress'] :is(.env-pocket, .env-flap-face) .env-print-letterpress,
+html[data-envelope-design='botanical'] :is(.env-pocket, .env-flap-face) .env-print-botanical,
+html[data-envelope-design='deco'] :is(.env-pocket, .env-flap-face) .env-print-deco,
+html[data-envelope-design='field'] :is(.env-pocket, .env-flap-face) .env-print-field,
+html[data-envelope-design='minimal'] :is(.env-pocket, .env-flap-face) .env-print-minimal,
+.envelope-design-preview[data-envelope-design='letterpress'] .env-print-letterpress,
+.envelope-design-preview[data-envelope-design='botanical'] .env-print-botanical,
+.envelope-design-preview[data-envelope-design='deco'] .env-print-deco,
+.envelope-design-preview[data-envelope-design='field'] .env-print-field,
+.envelope-design-preview[data-envelope-design='minimal'] .env-print-minimal { display: inline; }
+
+html[data-envelope-design]:not([data-envelope-design='airmail']) .env-border { display: none; }
+
+/* Letterpress: fine inset framing, old-style typography, a centered dedication. */
+html[data-envelope-design='letterpress'] .env-name {
+  font-weight: 500; letter-spacing: .035em;
+}
+html[data-envelope-design='letterpress'] .env-address-zone {
+  top: 67%; left: 20%; right: 20%; text-align: center;
+}
+html[data-envelope-design='letterpress'] .env-to {
+  font-family: 'Newsreader', serif; font-weight: 500; font-style: italic;
+  font-size: clamp(.8rem, 2.4cqw, 1.15rem);
+}
+html[data-envelope-design='letterpress'] .env-lines { align-items: center; margin-top: 2.5%; }
+html[data-envelope-design='letterpress'] .env-lines span { width: 60%; }
+html[data-envelope-design='letterpress'] .env-lines span:nth-child(n+2) { display: none; }
+html[data-envelope-design='letterpress'] .env-bottom-meta {
+  right: 12%; left: 12%; max-width: none; bottom: 12.5%; text-align: center;
+}
+
+/* Botanical: engraved leaves occupy the margins, leaving a quiet writing area. */
+html[data-envelope-design='botanical'] .env-address-zone {
+  left: 22%; right: 22%; top: 67%; text-align: center;
+}
+html[data-envelope-design='botanical'] .env-lines { align-items: center; margin-top: 4%; }
+html[data-envelope-design='botanical'] .env-lines span { width: 90%; }
+html[data-envelope-design='botanical'] .env-lines span:nth-child(2) { width: 65%; }
+html[data-envelope-design='botanical'] .env-lines span:nth-child(3) { display: none; }
+html[data-envelope-design='botanical'] .env-bottom-meta {
+  left: 18%; right: 18%; max-width: none; bottom: 7%; text-align: center;
+}
+
+/* Art Deco: stepped frame, corner fans and a compact, spaced capital heading. */
+html[data-envelope-design='deco'] .env-envelope-content { padding-top: 8%; }
+html[data-envelope-design='deco'] .env-name {
+  font-family: 'Atkinson Hyperlegible', sans-serif; font-size: clamp(1.15rem, 4.7cqw, 2.25rem);
+  font-weight: 700; letter-spacing: .11em; text-transform: uppercase;
+}
+html[data-envelope-design='deco'] .env-address-zone {
+  top: 68%; left: 21%; right: 21%; text-align: center;
+}
+html[data-envelope-design='deco'] .env-lines { align-items: center; gap: 4px; margin-top: 3%; }
+html[data-envelope-design='deco'] .env-lines span { width: 70%; }
+html[data-envelope-design='deco'] .env-lines span:nth-child(2) { width: 50%; }
+html[data-envelope-design='deco'] .env-lines span:nth-child(3) { display: none; }
+html[data-envelope-design='deco'] .env-bottom-meta {
+  left: 15%; right: 15%; max-width: none; text-align: center; bottom: 18%;
+}
+
+/* Field Post: an asymmetric sender block, compass and pasted-on address label. */
+html[data-envelope-design='field'] .env-envelope-content {
+  align-items: flex-start; text-align: left; padding-left: 24%; padding-right: 16%;
+}
+html[data-envelope-design='field'] .env-name {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-size: clamp(1.35rem, 5.4cqw, 2.6rem);
+}
+html[data-envelope-design='field'] .env-envelope-content .env-tagline {
+  max-width: 34ch; font-size: clamp(.8rem, 2.4cqw, 1.15rem);
+}
+html[data-envelope-design='field'] .env-address-zone {
+  top: 65%; bottom: 14%; left: 31%; right: 9%;
+  padding: 1.6% 2.5%; border: 1px solid #59473244;
+  background: var(--envelope-paper-top); box-shadow: 1px 3px 4px #35231718;
+  transform: rotate(.6deg);
+}
+html[data-envelope-design='field'] .env-to {
+  font-family: 'Atkinson Hyperlegible', sans-serif; font-size: clamp(.7rem, 1.9cqw, .95rem);
+}
+html[data-envelope-design='field'] .env-lines { margin-top: 3%; gap: 7px; }
+html[data-envelope-design='field'] .env-lines span:nth-child(3) { display: none; }
+html[data-envelope-design='field'] .env-bottom-meta { right: 9%; bottom: 7%; }
+
+/* Minimal: no ornamental frame; one strong margin and a restrained address. */
+html[data-envelope-design='minimal'] .env-name {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-size: clamp(1.4rem, 5.7cqw, 2.75rem); letter-spacing: -.025em;
+}
+html[data-envelope-design='minimal'] .env-address-zone {
+  top: 70%; left: 14%; right: 14%; text-align: center;
+}
+html[data-envelope-design='minimal'] .env-to {
+  font-family: 'DM Sans', sans-serif; font-weight: 400;
+  font-size: clamp(.75rem, 2cqw, 1rem);
+}
+html[data-envelope-design='minimal'] .env-lines { display: none; }
+html[data-envelope-design='minimal'] .env-bottom-meta {
+  left: 9%; right: 9%; max-width: none; bottom: 7%; text-align: left;
+}
+
+/* The tuner shows actual ornaments as thumbnails, in the selected paper color. */
+.tuner-section-note { margin: -.15rem 0 .5rem; font-size: .7rem; color: #d5cbe5; }
+.tuner-design-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
+.tuner-design-options button {
+  min-width: 0; padding: .4rem; display: flex; flex-direction: column; gap: .25rem;
+  text-align: left; color: #efe9ff; font: inherit; cursor: pointer;
+  background: #ffffff08; border: 1px solid #ffffff24; border-radius: 8px;
+}
+.tuner-design-options button:hover { background: #ffffff12; }
+.tuner-design-options button[aria-pressed='true'] { border-color: #efd28a; background: #efd28a18; }
+.tuner-design-options strong { font-size: .74rem; }
+.tuner-design-options small { font-size: .65rem; color: #cec4de; line-height: 1.3; }
+.tuner-panel button:focus-visible { outline: 2px solid #efd28a; outline-offset: 2px; }
+.envelope-design-preview {
+  position: relative; display: block; width: 100%; aspect-ratio: 1.54;
+  overflow: hidden; border-radius: 3px;
+  background: linear-gradient(155deg, var(--envelope-paper-top), var(--envelope-paper-bottom));
+}
+.envelope-design-preview .env-design-art { stroke-width: 6; }
+.envelope-design-preview .env-print { stroke-width: 6; }
+.envelope-design-preview[data-envelope-design='airmail'] { border: 3px dashed var(--envelope-airmail-blue); }
+.envelope-preview-folds { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: #765c3a55; stroke-width: 5; }
+.preview-name { stroke: var(--ink); stroke-width: 14; }
+.preview-stamp { fill: var(--envelope-airmail-blue); stroke: #fff; stroke-width: 7; }
+.preview-seal { fill: #9e2b25; stroke: #741d1a; }
+.envelope-design-preview[data-envelope-design='field'] .preview-name { transform: translateX(-65px); }
+
+@media (max-width: 680px) {
+  .tuner-panel { bottom: 58px; max-height: calc(100svh - 74px); }
+  .env-flap-face .env-heading-ornament { display: none; }
+  html[data-envelope-design]:not([data-envelope-design='airmail']):not([data-envelope-design='field']) .env-envelope-content .env-tagline {
+    font-size: clamp(.72rem, 3.7cqw, .9rem); line-height: 1.1;
+  }
+  html[data-envelope-design='letterpress'] .env-to { font-size: clamp(.72rem, 3.5cqw, .9rem); line-height: 1.15; }
+  html[data-envelope-design='letterpress'] .env-lines,
+  html[data-envelope-design='deco'] .env-lines { display: none; }
+  html[data-envelope-design='deco'] .env-envelope-content { padding-left: 12%; padding-right: 12%; }
+  html[data-envelope-design='deco'] .env-name { letter-spacing: .06em; }
+  html[data-envelope-design='field'] .env-lines span:nth-child(2) { display: none; }
+  html[data-envelope-design='field'] .env-bottom-meta { max-width: none; font-size: .36rem; }
+  html[data-envelope-design='letterpress'] .env-bottom-meta,
+  html[data-envelope-design='botanical'] .env-bottom-meta,
+  html[data-envelope-design='deco'] .env-bottom-meta { font-size: .36rem; letter-spacing: .04em; }
+  html[data-envelope-design='letterpress'] .env-address-zone,
+  html[data-envelope-design='botanical'] .env-address-zone,
+  html[data-envelope-design='deco'] .env-address-zone { left: 18%; right: 18%; }
+}

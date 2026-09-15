@@ -1,0 +1,75 @@
+/* A physical stack: back sheet, contents, front pocket, hinged flap, wax seal. */
+/* Reserve navigation height during opening/return so hiding the controls does
+   not change the measured card destination in the middle of a transfer. */
+.deck-counter[hidden] { display: flex; visibility: hidden; pointer-events: none; }
+.envelope-flap-plane, .envelope-seal-plane {
+  position: absolute; width: var(--env-view-w); aspect-ratio: 1.54;
+  top: 50%; left: 50%; margin-left: calc(var(--env-view-w) / -2);
+  margin-top: calc(var(--env-view-w) / -3.08);
+  transform-origin: center; container-type: inline-size; pointer-events: none;
+}
+.envelope-back { z-index: 0; }
+.envelope-flap-plane { z-index: 4; }
+.envelope-flap-plane.is-behind { z-index: 1; }
+.envelope-seal-plane { z-index: 5; }
+.cards-front .deck-window { z-index: 6; }
+.cards-front .envelope-front { z-index: 3; }
+.experience-canvas[data-phase='sealed'] .deck-rise { visibility: visible; }
+.env-backplane, .env-pocket {
+  background: none; clip-path: none; box-shadow: none;
+  border: 0; overflow: visible;
+}
+.env-backplane { filter: drop-shadow(0 14px 18px #07071955); }
+.env-pocket::before, .env-pocket::after { display: none; }
+.env-flap {
+  inset: 0 0 auto; height: calc(100% * 360 / 650);
+  transform-style: preserve-3d; transform-origin: 50% 0;
+}
+.env-flap-face, .env-flap-back {
+  inset: 0; border: 0; border-radius: 0; clip-path: none;
+  background: none; box-shadow: none; filter: none;
+  backface-visibility: hidden; -webkit-backface-visibility: hidden;
+}
+.env-flap-face::before, .env-flap-face::after { display: none; }
+.env-flap-back { display: block; transform: rotateX(180deg); }
+/* Compensate for the reverse face's local flip so both faces share the same
+   triangular silhouette and the base stays attached to the top hinge. */
+.env-flap-back > .envelope-paper { transform: scaleY(-1); }
+.env-flap-face .env-envelope-content {
+  inset: 0; height: calc(100% * 650 / 360); transition: none;
+}
+.env-flap-face .env-postage {
+  transform: scale(var(--postage-scale, 1.25)); transform-origin: top right;
+}
+.env-design-art--flap { height: calc(100% * 650 / 360); clip-path: polygon(0 0, 100% 0, 50% 54%); }
+.env-pocket > .env-design-art { clip-path: polygon(0 0, 50% 51%, 100% 0, 100% 100%, 0 100%); }
+.envelope-paper { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.cards-front .envelope-hit { clip-path: polygon(0 0, 50% 51%, 100% 0, 100% 100%, 0 100%); }
+.construction-preview {
+  display: block; position: relative; width: 100%; aspect-ratio: 1.54;
+  border-radius: 3px; isolation: isolate;
+}
+.construction-preview-flap { position: absolute; inset: 0 0 auto; height: calc(100% * 360 / 650); }
+.construction-preview-seal { position: absolute; left: 46%; top: 46%; width: 8%; aspect-ratio: 1; border-radius: 50%; background: #9e2b25; box-shadow: 0 1px 2px #49151266; }
+.tuner-motion-options { display: grid; gap: .4rem; }
+.tuner-motion-options button {
+  display: grid; gap: .25rem; text-align: left; padding: .6rem;
+  border: 1px solid #ffffff24; border-radius: 8px; color: #efe9ff;
+  background: #ffffff08; font: inherit; cursor: pointer;
+}
+.tuner-motion-options button[aria-pressed='true'] { border-color: #efd28a; background: #efd28a18; }
+.tuner-motion-options small { font-size: .7rem; color: #cec4de; }
+.tuner-envelopes:disabled { opacity: .55; }
+.tuner-envelopes:disabled button { cursor: wait; }
+@media (max-width: 680px) {
+  .env-flap-face .env-envelope-content { padding-top: 3%; }
+  .env-flap-face .env-envelope-content .env-name { font-size: clamp(1.25rem, 7.5cqw, 1.65rem); }
+  .env-flap-face .env-envelope-content .env-tagline {
+    max-width: 25ch; font-size: clamp(.72rem, 4cqw, .93rem);
+  }
+  .envelope-seal-plane .env-seal {
+    width: clamp(44px, 16cqw, 58px); height: auto; aspect-ratio: 1;
+    left: 50%; top: 52%; margin-left: calc(clamp(44px, 16cqw, 58px) / -2);
+    margin-top: calc(clamp(44px, 16cqw, 58px) / -2);
+  }
+}

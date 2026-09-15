@@ -16,3 +16,10 @@ class IntersectionObserverStub implements IntersectionObserver {
 }
 
 globalThis.IntersectionObserver = IntersectionObserverStub;
+
+class ResizeObserverStub implements ResizeObserver {
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+}
+globalThis.ResizeObserver = ResizeObserverStub;
