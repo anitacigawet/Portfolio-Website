@@ -23,7 +23,7 @@ export function AboutContent() {
         </p>
         <div className="bc-contact">
           <span className="bc-mark" aria-hidden="true">JJ</span>
-          <span>ScootSolute LLC · Arizona, USA</span>
+          <span>ScootSolute LLC · Oregon, USA</span>
           <a href="mailto:james@scootsolute.org">james@scootsolute.org</a>
           <a href="https://github.com/anitacigawet" target="_blank" rel="noreferrer">
             github.com/anitacigawet

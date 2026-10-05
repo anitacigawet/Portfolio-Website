@@ -56,7 +56,7 @@ export function EnvelopeArtwork({ plane, phase, reduce, construction, onComplete
           <p className="env-to">For: anyone with a complicated problem</p>
           <div className="env-lines"><span /><span /><span /></div>
         </div>
-        <p className="env-meta env-bottom-meta">ScootSolute LLC · Est. 2024 · Arizona, USA</p>
+        <p className="env-meta env-bottom-meta">ScootSolute LLC · Oregon, USA</p>
       </div>
   );
 

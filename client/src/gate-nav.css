@@ -116,11 +116,12 @@
   transform: translate(-50%, -50%);
   font: 600 1.08rem/1 'Newsreader', serif;
   letter-spacing: .04em;
-  color: transparent;
-  background: linear-gradient(160deg, #f3e5b0 5%, #d9b95c 40%, #a9852e 75%, #8a6d1f 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.55);
+  color: #090a0d;
+  -webkit-text-fill-color: #090a0d;
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.22), 0 1px 1px rgba(0, 0, 0, 0.65);
   filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.6));
 }
 
